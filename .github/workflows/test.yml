@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: step_1
         run: |
-        echo WIN
+          echo WIN
