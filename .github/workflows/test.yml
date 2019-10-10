@@ -17,3 +17,9 @@ jobs:
       - name: run
         run: |
           echo FAIL
+  jump:
+    run-on: ubuntu-latest
+    steps:
+      - name: run
+        run: |
+          echo WHY
