@@ -5,9 +5,15 @@ on:
     - cron: '0 * * * *'
     
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: step_1
         run: |
           echo WIN
+  run:
+    run-on: ubuntu-latest
+    steps:
+      - name: run
+        run: |
+          echo FAIL
