@@ -1,31 +1,14 @@
 name: Test
 
-on:
-  schedule:
-    - cron: '0 * * * *'
-    
+on: push
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: step_1
+      - name: download
         run: |
-          echo WIN
-  run:
-    run-on: ubuntu-latest
-    steps:
-      - name: run
+          curl https://mailchi.mp/d891d51382cd/ambassadors > file.txt
+      - name: contents
         run: |
-          echo FAIL
-  jump:
-    run-on: ubuntu-latest
-    steps:
-      - name: run
-        run: |
-          echo WHY
-  how_high:
-    run-on: ubuntu-latest
-    steps:
-      - name: run
-        run: |
-          echo Up There
+          cat file.txt
