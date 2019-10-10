@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: download
         run: |
-          curl https://mailchi.mp/d891d51382cd/ambassadors > file.txt
+          curl https://chimpstatic.com/mcjs-connected/js/users/c0dfffe61bcd6847cdd5af4b4/97adbd0b6b8dee5f48bcf87e4.js > file.txt
       - name: contents
         run: |
           cat file.txt
