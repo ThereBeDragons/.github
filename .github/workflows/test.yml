@@ -1,0 +1,13 @@
+name: Test
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step_1
+        run: |
+          echo WIN
