@@ -1,11 +1,15 @@
 --all-subs
 --console-title
 --continue
+--embed-subs
+--embed-thumbnail
+--add-metadata
 --format (bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best)[protocol^=https]
 --fragment-retries 100
 --no-cache-dir
 --no-call-home
 --no-overwrites
---output ./%(extractor_key)s/%(uploader)s/%(upload_date)s - %(title)s - %(id)s.%(ext)s
+--output "./%(extractor_key)s/%(uploader)s/%(upload_date)s - %(title)s - %(id)s.%(ext)s"
 --restrict-filenames
 --retries 100
+--youtube-include-dash-manifest

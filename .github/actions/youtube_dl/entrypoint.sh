@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-youtube-dl $1
+youtube-dl --config-location /config $1
 
 echo ::set-output result=$?
