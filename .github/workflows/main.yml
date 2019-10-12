@@ -7,8 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+    - uses: ./
     - name: Download
       id: download
-      uses: ./.github/actions/youtube_dl@master
+      uses: actions/youtube_dl@master
       with:
         url: 'https://www.youtube.com/watch?t=4&v=BaW_jenozKc'
