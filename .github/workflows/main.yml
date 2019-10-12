@@ -12,5 +12,3 @@ jobs:
       uses: ./.github/actions/youtube_dl@master
       with:
         url: 'https://www.youtube.com/watch?t=4&v=BaW_jenozKc'
-    - name: Get the output tim
-      run: echo "Result: ${{ steps.download.outputs.result }}"
