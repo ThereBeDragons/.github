@@ -1,5 +1,10 @@
 name: YouTube-DL
-on: [push]
+
+on:
+  push:
+    paths:
+      - '.github/actions/**'
+      - '.github/workflows/**'
 
 jobs:
   youtube_dl:
@@ -12,3 +17,8 @@ jobs:
       uses: ./.github/actions/youtube_dl
       with:
         url: 'https://www.youtube.com/watch?t=4&v=BaW_jenozKc'
+    - name: Upload
+      uses: actions/upload-artifact@v1
+      with:
+        name: Video
+        path: ./Video
