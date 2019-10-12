@@ -6,9 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to download videos
     steps:
-    - uses: ./
     - name: Download
       id: downloadl
-      uses: therebedragons/youtube_dl@master
+      uses: ./.github/actions/youtube_dl@master
       with:
         url: 'https://www.youtube.com/watch?t=4&v=BaW_jenozKc'
