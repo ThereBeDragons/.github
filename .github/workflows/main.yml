@@ -9,6 +9,8 @@ jobs:
     - uses: ./
     - name: Download
       id: download
-      uses: actions/youtube_dl@${{ github.ref }}
+      env:
+        REF: ${{ github.ref }}
+      uses: actions/youtube_dl@${REF}
       with:
         url: 'https://www.youtube.com/watch?t=4&v=BaW_jenozKc'
