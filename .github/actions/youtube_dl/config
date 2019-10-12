@@ -4,7 +4,7 @@
 --embed-subs
 --embed-thumbnail
 --add-metadata
---format (bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best)[protocol^=https]
+--format '(bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best)[protocol^=https]'
 --fragment-retries 100
 --no-cache-dir
 --no-call-home
@@ -13,3 +13,5 @@
 --restrict-filenames
 --retries 100
 --youtube-include-dash-manifest
+--xattrs
+--prefer-ffmpeg

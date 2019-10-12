@@ -7,6 +7,7 @@ RUN \
   apt-get update                        \
   && apt-get install --yes              \
     atomicparsley                       \
+    ffmpeg                              \
   && pip install youtube-dl             \
   && chmod +x /entrypoint.sh
 
