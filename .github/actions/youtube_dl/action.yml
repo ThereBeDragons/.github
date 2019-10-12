@@ -1,0 +1,17 @@
+name: 'YouTube-DL'
+description: ''
+inputs:
+  url:
+    description: 'video url to download'
+    required: true
+branding:
+  icon: 'download'
+  color: 'red'
+outputs:
+  result: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.url }}
