@@ -3,6 +3,9 @@ name: YouTube-DL
 on: [push]
 
 jobs:
+  youtube-dl:
+    container:
+      image: python:stretch
   build:
 
     runs-on: ubuntu-latest
