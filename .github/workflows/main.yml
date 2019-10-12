@@ -8,9 +8,7 @@ jobs:
     steps:
     - uses: ./
     - name: Download
-      id: download
-      env:
-        REF: ${{ github.ref }}
-      uses: actions/youtube_dl@${REF}
+      id: downloadl
+      uses: therebedragons/youtube_dl@master
       with:
         url: 'https://www.youtube.com/watch?t=4&v=BaW_jenozKc'
