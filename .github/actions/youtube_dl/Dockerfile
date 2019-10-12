@@ -4,7 +4,8 @@ COPY config /config
 COPY entrypoint.sh /entrypoint.sh
 
 RUN \
-  apt-get install --yes                 \
+  apt-get update                        \
+  && apt-get install --yes              \
     atomicparsley                       \
   && pip install youtube-dl             \
   && chmod +x /entrypoint.sh
