@@ -13,4 +13,3 @@ jobs:
       uses: ./.github/actions/swift_packaging
       with:
         subcommand: 'build'
-        arguments:  ''
