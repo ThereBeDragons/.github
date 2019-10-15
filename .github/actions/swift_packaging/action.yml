@@ -1,13 +1,14 @@
 name: 'Swift'
 description: ''
 branding:
-  icon: 'swift'
-  color: 'red'
+  icon: 'terminal'
+  color: 'gray-dark'
 inputs:
   subcommand:
     description: ''
+    default: '--help'
     required: true
-  args:
+  arguments:
     description: ''
     required: false
 outputs:
@@ -16,6 +17,4 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.subcommand }}
-    - ${{ inputs.args }}
+  args: ['${{ inputs.subcommand }}', '${{ inputs.arguments }}']
