@@ -1,11 +1,11 @@
-name: Build Swift Package
+name: Swift
 
 on: push
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build package
+    name: Build Swift Package
     steps:
     - uses: actions/checkout@master
     - name: Build Package
@@ -13,3 +13,8 @@ jobs:
       uses: ./.github/actions/swift_packaging
       with:
         args: 'build'
+    - name: Upload Build Archive
+      uses: actions/upload-artifact@master
+      with:
+        name: 'Build Archive'
+        path: ./
