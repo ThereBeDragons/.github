@@ -1,0 +1,13 @@
+name: Build Swift Package
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build package
+    steps:
+    - uses: actions/checkout@master
+    - name: Build Package
+      id: build
+      uses: ./.github/actions/swift_packaging

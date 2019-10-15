@@ -1,0 +1,17 @@
+name: 'Swift Packaging'
+description: ''
+inputs:
+  arg:
+    description: ''
+    required: true
+branding:
+  icon: 'swift'
+  color: 'red'
+outputs:
+  result:
+    description: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.arg }}
