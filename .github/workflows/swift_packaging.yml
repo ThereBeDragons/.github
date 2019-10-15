@@ -11,3 +11,5 @@ jobs:
     - name: Build Package
       id: build
       uses: ./.github/actions/swift_packaging
+      with:
+        subcommand: build

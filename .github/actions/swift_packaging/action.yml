@@ -1,9 +1,5 @@
-name: 'Swift Packaging'
+name: 'Swift'
 description: ''
-inputs:
-  arg:
-    description: ''
-    required: true
 branding:
   icon: 'swift'
   color: 'red'
