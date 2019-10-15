@@ -1,4 +1,4 @@
 FROM swift:latest
 
-ENTRYPOINT ["swift"]
+ENTRYPOINT ["/usr/bin/swift "]
 CMD ["--help"]
