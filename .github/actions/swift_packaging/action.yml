@@ -7,9 +7,19 @@ inputs:
 branding:
   icon: 'swift'
   color: 'red'
+inputs:
+  subcommand:
+    description: ''
+    required: true
+  args:
+    description: ''
+    required: false
 outputs:
   result:
     description: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.subcommand }}
+    - ${{ inputs.args }}
