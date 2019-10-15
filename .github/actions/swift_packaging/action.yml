@@ -4,16 +4,15 @@ branding:
   icon: 'terminal'
   color: 'gray-dark'
 inputs:
-  subcommand:
+  args:
     description: ''
     default: '--help'
     required: true
-  arguments:
-    description: ''
-    required: false
 outputs:
   result:
     description: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  with:
+    - ${{ inputs.args }}

@@ -12,4 +12,4 @@ jobs:
       id: build
       uses: ./.github/actions/swift_packaging
       with:
-        subcommand: 'build'
+        args: 'build'
