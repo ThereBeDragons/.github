@@ -1,5 +1,5 @@
-#!/bin/sh -l
+#! /bin/sh
 
-/usr/bin/swift "${*}"
+/usr/bin/swift "${@}"
 
 echo ::set-output result="${?}"
